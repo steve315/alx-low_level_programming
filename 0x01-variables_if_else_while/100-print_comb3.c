@@ -10,7 +10,6 @@ int main(void)
 	/* variable declaration */
 	int n;
 	int m;
-	int a;
 
 	for (n = 0; n < 10; n++)
 	{
