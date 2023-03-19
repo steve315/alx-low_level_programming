@@ -11,16 +11,19 @@ int main(void)
 	int n;
 	int m;
 
-	for (n = 0; n < 10; n++)
+	for (n = 48; n < 56; n++)
 	{
-		for (m = 0; m < 10; m++)
+		for (m = 48; m < 57; m++)
 		{
-			if (m < 9)
+			if (m > n)
 			{
-				putchar(m + '0');
-				putchar(n + '0');
+				putchar(m);
+				putchar(n);
+				if (n != 48 || m != 57)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
 	}
