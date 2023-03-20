@@ -7,18 +7,20 @@
  */
 int main(void)
 {
-	/* variable declaration */
-	int n;
+	char a;
 
-	for (n = 0; n < 10; n++)
+	a = 0;
+	while (a < 10)
 	{
-		putchar(n + '0');
-		if (n < 9)
+		putchar(a + '0');
+		if (a != 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
+		a++;
 	}
 	putchar('\n');
 	return (0);
 }
+
