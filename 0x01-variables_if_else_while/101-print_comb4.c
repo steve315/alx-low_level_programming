@@ -7,28 +7,31 @@
  */
 int main(void)
 {
-	/* variable declaration */
-	int n;
-	int m;
-	int o;
-
-	for (m = 0; m < 10; m++)
+	/*variable declarations*/
+int a, b, c;
+	for (a = 0; a < 10; a++)
 	{
-		for (n = 0; n < 10; n++)
+	for (b = 0; b < 10; b++)
+	{
+		if (a < b)
 		{
-			for (o = 0; o < 10; o++)
+			for (c = 0; c < 10; c++)
 			{
-				if (o < 9)
+				if (b < c)
 				{
-					putchar(m + '0');
-					putchar(n + '0');
-					putchar(o + '0');
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(c + '0');
+					if (a != 7 || b != 8 || c != 9)
+					{
 					putchar(',');
 					putchar(' ');
+					}
 				}
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+	}
+putchar('\n');
+return (0);
 }
