@@ -5,28 +5,29 @@
  * Program that prints all possible combinations of single digit numbers
  * Return: 0
  */
+
 int main(void)
 {
-	/* variable declaration */
-	int n;
-	int m;
+	/* variable declaration*/
+	int a;
+	int b;
 
-	for (n = 48; n < 56; n++)
+	for (a = 0; a < 10; a++)
 	{
-		for (m = 48; m < 57; m++)
+		for (b = 0; b < 10; b++)
 		{
-			if (m > n)
+			if (a < b)
 			{
-				putchar(m);
-				putchar(n);
-				if (n != 48 || m != 57)
+				putchar(a + '0');
+				putchar(b + '0');
+				if (a != 8 || b != 9)
 				{
-				putchar(',');
-				putchar(' ');
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
