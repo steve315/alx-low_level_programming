@@ -1,17 +1,8 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main -  entry point
  * print_alphabet_x10 - prints letters of the alphabet ten times
- * @parameter - null
- * Return: 0
  */
-void print_alphabet(void);
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i = 1;
 
@@ -22,10 +13,10 @@ void print_alphabet(void)
 		a = 'a';
 		while (a <= 'z')
 		{
-			putchar(a);
+			_putchar(a);
 			a++;
 		}
 		i++;
-	putchar('\n');
+	_putchar('\n');
 	}
 }
