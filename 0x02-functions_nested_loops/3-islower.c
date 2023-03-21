@@ -1,21 +1,15 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 /**
- * main -  entry point
- * print_alphabet - prints letters of the alphabet in lowecase
- * @parameter - null
- * Return: 0
+ * _islower- checks is a character is lowecase
  */
-int _islower(int c);
-int main(void)
-{
-	_islower('y');
-	putchar('\n');
-}
 int _islower(int c)
 {
-	int r;
-
-	r = islower(c);
-	return (putchar(r + '0'));
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
