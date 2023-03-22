@@ -7,8 +7,8 @@
 int main(void)
 {
 	int i, n;
-	int a, b;
-	int next_num;
+	long int a, b;
+	long int next_num;
 
 	a = 1;
 	b = 2;
@@ -17,17 +17,17 @@ int main(void)
 	next_num = a + b;
 
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 
 	for (i = 3; i <= n; i++)
 	{
 		if (i < n)
 		{
-			printf("%d, ", next_num);
+			printf("%ld, ", next_num);
 		}
 		else if (i == n)
 		{
-			printf("%d", next_num);
+			printf("%ld", next_num);
 		}
 		a = b;
 		b = next_num;
