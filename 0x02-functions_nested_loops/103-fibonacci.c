@@ -7,14 +7,14 @@
 int main(void)
 {
 	int i, n;
-        long int a, b;
-        long int next_num, max, sum;
-	
+	long int a, b;
+	long int next_num, max, sum;
+
 	a = 1;
 	b = 2;
 	n = 50;
 	next_num = a + b;
-	max = 4000;
+	max = 4000000;
 	sum = 2;
 
 	for (i = 3; i <= n; i++)
@@ -24,11 +24,11 @@ int main(void)
 			a = b;
 			b = next_num;
 			next_num = a + b;
-		if ((next_num % 2) == 0 && next_num < max)
+			if ((next_num % 2) == 0 && next_num < max)
 			{
 				sum += next_num;
 			}
-		else
+			else
 			{
 				sum = sum;
 			}
@@ -40,5 +40,5 @@ int main(void)
 	}
 	printf("%ld", sum);
 	printf("\n");
-return (0);
+	return (0);
 }
