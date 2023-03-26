@@ -1,5 +1,4 @@
 # Project: 0x03-debugging
-## Bash Scripts
 ---
 |File Name|Description|
 |-----------|-----------|
