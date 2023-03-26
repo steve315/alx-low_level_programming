@@ -1,5 +1,4 @@
 # Project: 0x02-functions_nested_loops
-## Bash Scripts
 ---
 |File Name|Description|
 |-----------|-----------|
