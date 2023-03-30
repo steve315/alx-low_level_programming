@@ -4,32 +4,22 @@
  * @s: input string
  * Return: 0 on success
  */
-char *leet(char *s)
+char *leet(char *n)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	char n1[] = "aAeEoOtTlL";
+	char n2[] = "4433007711";
+
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (s[i] == 65 || s[i] == 77)
+		for (j = 0; j < 10; j++)
 		{
-			s[i] = 52;
-		}
-		else if (s[i] == 69 || s[i] == 101)
-		{
-			s[i] = 51;
-		}
-		else if (s[i] == 79 || s[i] == 111)
-		{
-			s[i] = 48;
-		}
-		else if (s[i] == 84 || s[i] == 116)
-		{
-			s[i] = 55;
-		}
-		else if (s[i] == 76 || s[i] == 108)
-		{
-			s[i] = 49;
+			if (n[i] == n1[j])
+			{
+				n[i] = n2[j];
+			}
 		}
 	}
-return (s);
+	return (n);
 }
