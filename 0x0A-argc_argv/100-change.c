@@ -8,9 +8,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents;
-	int coins = 0;
-	int rem = 0;
+	int cents, coins, temp, index;
+
+	int value[] = {25, 10, 5, 2, 1};
+
+	coins = index = 0;
 
 	if (argc != 2)
 	{
@@ -18,38 +20,23 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cents = atoi(argv[1]);
+
 	if (cents < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	if (cents % 25 < 25)
+	while (value[index] != '\0')
 	{
-		coins += cents / 25;
-		rem += cents % 25;
-		if (rem % 10 < 10)
+		if (cents >= value[index])
 		{
-			coins += rem / 10;
-			rem = rem % 10;
-
-			if (rem % 5 < 5)
-			{
-				coins += rem / 5;
-				rem = rem % 5;
-				if (rem % 2 < 2)
-				{
-					coins += rem / 2;
-					rem = rem % 2;
-
-					if (rem % 1 < 1)
-					{
-						coins += rem / 1;
-						rem = rem % 1;
-					}
-				}
-			}
+			temp = cents / value[index];
+			coins += temp;
+			cents = cents - (value[index] * temp);
 		}
+		index++;
 	}
 	printf("%d\n", coins);
 	return (0);
+
 }
