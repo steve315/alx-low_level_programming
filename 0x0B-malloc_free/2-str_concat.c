@@ -27,18 +27,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		l2++;
 	}
-	l3 = l1 + l2;
+	l3 = l1 + l2 + 1;
 	s3 = (char *) malloc(l3 * sizeof(char));
 	if (s3 == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; *(s1 + i) != '\0'; i++)
+	for (i = 0; *(s1 + i) != '\0'; i++) /* similar to _strcat implementation*/
 	{
 		*(s3 + i) = *(s1 + i);
 	}
 
-	for (j = 0; *(s2 + j) != '\0'; j++)
+	for (j = 0; *(s2 + j) != '\0'; j++) /*_strcat implementation*/
 	{
 		*(s3 + i) = *(s2 + j);
 		i++;
