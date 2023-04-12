@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int l1, l2, l3, i, j = 0;
+	unsigned int l, l2, i, j = 0;
 	char *s3;
 
 	if (s1 == NULL)
@@ -19,16 +19,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	while (*(s1 + l1) != '\0')
+	for (l = 0; s1[l] != '\0'; l++);
+	for (l2 = 0; s2[l2] != '\0'; l2++)
 	{
-		l1++;
+		l++;
 	}
-	while (*(s2 + l2) != '\0')
-	{
-		l2++;
-	}
-	l3 = l1 + l2;
-	s3 = malloc(sizeof(*s3) * l3);
+	s3 = malloc(sizeof(char *) * l);
 	if (s3 == 0)
 	{
 		return (NULL);
