@@ -31,12 +31,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (nptr == NULL)
 	{
 		free(ptr);
-		free(nptr);
 		return (NULL);
 	}
 	if (new_size > old_size)
 	{
-		for (i = 0; i < old_size; i++)
+		for (i = 0; i < (old_size || new_size); i++)
 		{
 			*(nptr + i) = *(temp + i);
 		}
