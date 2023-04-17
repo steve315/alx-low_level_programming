@@ -1,5 +1,4 @@
 #include "dog.h"
-#include <string.h>
 /**
  * init_dog - initializes a dog struct
  * @d: pointer to dog d
@@ -9,7 +8,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	strcpy((*d).name, name);
-	(*d).age = age;
-	strcpy((*d).owner, owner);
+	d->name, name;
+	d.age = age;
+	d->owner = owner;
 }
