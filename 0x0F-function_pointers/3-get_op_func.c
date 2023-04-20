@@ -2,9 +2,11 @@
 #include "3-calc.h"
 
 /**
- * get_opt_func - pointer to function that selects right function
- * Return: pointer to function to be executed
- */
+* get_op_func - function pointer that selects funtion as per
+* the operator provided by user
+* @s: operator provided by he user
+* Return: pointer to right function to execute
+*/
 int (*get_op_func(char *s))(int, int)
 {
 	int i;
