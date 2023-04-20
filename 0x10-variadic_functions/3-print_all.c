@@ -9,14 +9,13 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	char *string;
-	unsigned int i, j, x;
+	unsigned int i = 0, j = 0, x;
 	char arr[] = "iscf";
 
-	j = i = 0;
 	va_start(args, format);
 	while (format && format[i])
 	{
-        x = 0;
+		x = 0;
 		while (arr[x])
 		{
 			if (format[i] == arr[x] && j)
