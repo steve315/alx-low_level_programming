@@ -12,10 +12,11 @@ void print_all(const char * const format, ...)
 	unsigned int i, j, x;
 	char arr[] = "iscf";
 
-	j = x = i = 0;
+	j = i = 0;
 	va_start(args, format);
 	while (format && format[i])
 	{
+        x = 0;
 		while (arr[x])
 		{
 			if (format[i] == arr[x] && j)
